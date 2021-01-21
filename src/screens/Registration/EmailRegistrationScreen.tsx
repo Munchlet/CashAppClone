@@ -19,7 +19,6 @@ export default function EmailRegistrationScreen() {
 	const inputRef = useRef<TextInput>(null);
 	const [method, setMethod] = useState<SelectedMethod>(SelectedMethod.Phone);
 	const [value, setValue] = useState<string>("");
-	const window = useWindowDimensions();
 
 	const onKeyPressed = (key: any) => {
 		console.log(key);
@@ -29,10 +28,10 @@ export default function EmailRegistrationScreen() {
 				if (inputRef.current) inputRef.current.focus();
 				break;
 			case "back":
-				setValue((prev) => prev.slice(0, -1));
+				setValue(prev => prev.slice(0, -1));
 				break;
 			default:
-				setValue((prev) => `${prev}${key}`);
+				setValue(prev => `${prev}${key}`);
 		}
 	};
 
@@ -74,7 +73,7 @@ export default function EmailRegistrationScreen() {
 							[1, 2, 3],
 							[4, 5, 6],
 							[7, 8, 9],
-							["ABC", 0, 1],
+							["abc", 0, 1],
 						]}
 					/>
 					<View style={{ alignItems: "center" }}>
@@ -100,7 +99,7 @@ export default function EmailRegistrationScreen() {
 							theme={ThemeType.SECONDARY}
 							text="Use Phone"
 							onPress={() => {
-								console.log(`good`)
+								console.log(`good`);
 								setMethod(SelectedMethod.Phone);
 								if (inputRef.current) inputRef.current.blur();
 								Keyboard.dismiss();

@@ -1,6 +1,6 @@
 import React from "react";
 import { TypedNavigator } from "@react-navigation/native";
-import { NavigationModule } from "../types";
+import { NavigationModule } from "../typings";
 
 type ToNavigationModule<T> = T extends TypedNavigator<infer ParamList, any, infer ScreenOptions, any, any>
 	? NavigationModule<ParamList, ScreenOptions>
