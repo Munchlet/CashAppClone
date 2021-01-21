@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Keyboard, StyleSheet, Text, TextInput, useWindowDimensions, View, ViewStyle } from "react-native";
+import { Keyboard, StyleSheet, Text, TextInput, View, ViewStyle } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { VirtualKeyboard } from "react-native-screen-keyboard";
 import { s } from "react-native-size-matters";
 import Button from "../../shared/components/Button";
 import { ThemeType } from "../../shared/ThemeManager";
 import SafeScreen from "./SafeScreen";
+import { validateEmail, validatePhone } from "../../utils/Helper";
 
 // interface Props extends StackNavigationProp {}
 
@@ -20,8 +21,11 @@ export default function EmailRegistrationScreen() {
 	const [method, setMethod] = useState<SelectedMethod>(SelectedMethod.Phone);
 	const [value, setValue] = useState<string>("");
 
+	useEffect(() => {
+		Keyboard.dismiss();
+	}, []);
+
 	const onKeyPressed = (key: any) => {
-		console.log(key);
 		switch (key) {
 			case "custom":
 				setMethod(SelectedMethod.Email);
@@ -37,9 +41,17 @@ export default function EmailRegistrationScreen() {
 
 	const onInputChange = (text: string) => setValue(text);
 
-	useEffect(() => {
-		Keyboard.dismiss();
-	}, []);
+	const onNextClick = () => {
+		if (value.length < 1) return;
+		switch (method) {
+			case SelectedMethod.Phone:
+				if (!validatePhone(value)) return;
+				break;
+			case SelectedMethod.Email:
+				if (!validateEmail(value)) return;
+				break;
+		}
+	};
 
 	return (
 		<SafeAreaView style={{ flex: 1, backgroundColor: "white", justifyContent: "space-between" }}>
@@ -77,7 +89,12 @@ export default function EmailRegistrationScreen() {
 						]}
 					/>
 					<View style={{ alignItems: "center" }}>
-						<Button width={90} text="Next" onPress={() => {}}></Button>
+						<Button
+							width={90}
+							text="Next"
+							onPress={onNextClick}
+							disabled={value.length < 1 || !validatePhone(value)}
+						></Button>
 					</View>
 				</View>
 			) : (
@@ -99,7 +116,6 @@ export default function EmailRegistrationScreen() {
 							theme={ThemeType.SECONDARY}
 							text="Use Phone"
 							onPress={() => {
-								console.log(`good`);
 								setMethod(SelectedMethod.Phone);
 								if (inputRef.current) inputRef.current.blur();
 								Keyboard.dismiss();
@@ -107,7 +123,12 @@ export default function EmailRegistrationScreen() {
 						></Button>
 					</View>
 					<View style={{ flex: 1, alignItems: "center" }}>
-						<Button width={90} text="Next" onPress={() => {}} disabled={value.length < 1}></Button>
+						<Button
+							width={90}
+							text="Next"
+							onPress={onNextClick}
+							disabled={value.length < 1 || !validateEmail(value)}
+						></Button>
 					</View>
 				</View>
 			)}

@@ -27,3 +27,10 @@ export const createNavigatorScreens = <T extends TypedNavigator<any, any, any, a
 
 	return () => <Navigator.Navigator {...navigatorOptions}>{children.map(child => child)}</Navigator.Navigator>;
 };
+
+export const validateEmail = (email: string): boolean =>
+	/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+		email
+	);
+
+export const validatePhone = (phone: string): boolean => /([0-9]*)/.test(phone);
