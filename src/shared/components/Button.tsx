@@ -39,10 +39,10 @@ interface Styles {
 
 const styles = StyleSheet.create<Styles>({
 	containerDisabled: {
-		backgroundColor: "rgba(221, 221, 221, 0.699)",
+		backgroundColor: "rgba(244, 244, 244, 0.65)",
 	},
 	container: {
-		backgroundColor: "lime",
+		backgroundColor: "#00d650",
 		fontFamily: "GothamMed",
 		borderRadius: 30,
 		justifyContent: "center",
@@ -55,7 +55,7 @@ const styles = StyleSheet.create<Styles>({
 		fontSize: s(14),
 	},
 	textDisabled: {
-		color: "rgba(255, 255, 255, 0.575)",
+		color: "rgba(244, 244, 244, 0.5)",
 	},
 	textSecondary: {
 		color: "black",
