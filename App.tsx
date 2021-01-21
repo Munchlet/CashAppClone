@@ -29,11 +29,7 @@ export default function App() {
 
 	return (
 		<NavigationContainer>
-			{/* <RegistrationNavigator /> */}
-			<RegistrationStack.Navigator screenOptions={{ headerShown: false }}>
-				{/* <RegistrationStack.Screen name="EmailRegistration" component={EmailRegistrationScreen} /> */}
-				<RegistrationStack.Screen name="EmailRegistration" component={Test} />
-			</RegistrationStack.Navigator>
+			<RegistrationNavigator />
 		</NavigationContainer>
 	);
 }

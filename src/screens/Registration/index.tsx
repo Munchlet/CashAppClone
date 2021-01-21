@@ -27,6 +27,9 @@ export interface RootStackScreenProps<T extends keyof RegistrationParamList> {
 export const RegistrationScreens: NavigationModule<RegistrationParamList> = {
 	EmailRegistration: {
 		component: EmailScreen,
+		options: {
+			headerShown: false,
+		},
 	},
 	PhoneRegistration: {
 		component: EmailScreen,

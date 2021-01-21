@@ -19,11 +19,11 @@ type ToNavigationModule<T> = T extends TypedNavigator<infer ParamList, any, infe
 export const createNavigatorScreens = <T extends TypedNavigator<any, any, any, any, any>>(
 	Navigator: T,
 	screens: ToNavigationModule<T>,
-	options?: Omit<React.ComponentProps<T["Navigator"]>, "children">
-) => {
-	const children = Object.entries(screens).map(([name, { component, options }], index) => {
-		return <Navigator.Screen key={name} name={name} component={component} options={options} />;
-	});
+	navigatorOptions?: Omit<React.ComponentProps<T["Navigator"]>, "children">
+): (() => JSX.Element) => {
+	const children = Object.entries(screens).map(([name, { component, options }], index) => (
+		<Navigator.Screen key={name} name={name} component={component} options={options} />
+	));
 
-	return <Navigator.Navigator>{children.map((child) => child)}</Navigator.Navigator>;
+	return () => <Navigator.Navigator {...navigatorOptions}>{children.map(child => child)}</Navigator.Navigator>;
 };
