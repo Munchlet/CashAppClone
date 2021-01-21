@@ -88,7 +88,7 @@ export default function EmailRegistrationScreen() {
 							["abc", 0, 1],
 						]}
 					/>
-					<View style={{ alignItems: "center" }}>
+					<View style={{ alignItems: "center", marginTop: 20 }}>
 						<Button
 							width={90}
 							text="Next"
@@ -166,7 +166,7 @@ const styles = StyleSheet.create<Styles>({
 		flex: 1,
 	},
 	bottomContainer: {
-		marginBottom: 20,
+		marginBottom: 26,
 	},
 	button: {
 		marginTop: 20,
