@@ -20,6 +20,7 @@ export default function EmailRegistrationScreen() {
 	const inputRef = useRef<TextInput>(null);
 	const [method, setMethod] = useState<SelectedMethod>(SelectedMethod.Phone);
 	const [value, setValue] = useState<string>("");
+	const [placeholder, setPlaceholder] = useState<string>("Phone or Email");
 
 	useEffect(() => {
 		Keyboard.dismiss();
@@ -29,6 +30,7 @@ export default function EmailRegistrationScreen() {
 		switch (key) {
 			case "custom":
 				setMethod(SelectedMethod.Email);
+				setPlaceholder("Email");
 				if (inputRef.current) inputRef.current.focus();
 				break;
 			case "back":
@@ -53,6 +55,13 @@ export default function EmailRegistrationScreen() {
 		}
 	};
 
+	const onUsePhoneClick = () => {
+		setMethod(SelectedMethod.Phone);
+		setPlaceholder("Phone or Email");
+		if (inputRef.current) inputRef.current.blur();
+		Keyboard.dismiss();
+	};
+
 	return (
 		<SafeAreaView style={{ flex: 1, backgroundColor: "white", justifyContent: "space-between" }}>
 			<SafeScreen style={styles.topContainer}>
@@ -62,7 +71,7 @@ export default function EmailRegistrationScreen() {
 					style={styles.textInput}
 					onChangeText={onInputChange}
 					value={value}
-					placeholder="Phone or Email"
+					placeholder={placeholder}
 					// showSoftInputOnFocus={false}
 					onFocus={() => {
 						// for iOS?
@@ -115,11 +124,7 @@ export default function EmailRegistrationScreen() {
 							width={90}
 							theme={ThemeType.SECONDARY}
 							text="Use Phone"
-							onPress={() => {
-								setMethod(SelectedMethod.Phone);
-								if (inputRef.current) inputRef.current.blur();
-								Keyboard.dismiss();
-							}}
+							onPress={onUsePhoneClick}
 						></Button>
 					</View>
 					<View style={{ flex: 1, alignItems: "center" }}>
