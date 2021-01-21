@@ -21,10 +21,9 @@ export const createNavigatorScreens = <T extends TypedNavigator<any, any, any, a
 	screens: ToNavigationModule<T>,
 	options?: Omit<React.ComponentProps<T["Navigator"]>, "children">
 ) => {
-	// const Nav = Map.Navigator;
-	// const children = Object.entries(screens).map(([name, { component, options }], index) => {
-	// 	return <Nav.Screen key={name} name={name} component={component} options={options} />;
-	// });
+	const children = Object.entries(screens).map(([name, { component, options }], index) => {
+		return <Navigator.Screen key={name} name={name} component={component} options={options} />;
+	});
 
-	// return <Navigator.Navigator>{children.map((child) => child)}</Navigator.Navigator>;
+	return <Navigator.Navigator>{children.map((child) => child)}</Navigator.Navigator>;
 };
