@@ -4,6 +4,7 @@ import { s } from "react-native-size-matters";
 import { ThemeType } from "../ThemeManager";
 
 interface Props {
+	testKey: string;
 	text: string;
 	disabled?: boolean;
 	width?: number;
@@ -11,7 +12,14 @@ interface Props {
 	theme?: ThemeType;
 }
 
-export default function Button({ text, disabled = false, onPress, width = 100, theme = ThemeType.PRIMARY }: Props) {
+export default function Button({
+	testKey,
+	text,
+	disabled = false,
+	onPress,
+	width = 100,
+	theme = ThemeType.PRIMARY,
+}: Props) {
 	const containerStyle = [styles.container, { width: `${width}%` }];
 	const textStyle = [styles.text];
 
@@ -23,7 +31,12 @@ export default function Button({ text, disabled = false, onPress, width = 100, t
 	if (disabled) textStyle.push(styles.textDisabled);
 
 	return (
-		<TouchableOpacity style={containerStyle} onPress={() =>  !disabled && onPress()} disabled={disabled}>
+		<TouchableOpacity
+			testID={`test-button-${testKey}`}
+			style={containerStyle}
+			onPress={() => !disabled && onPress()}
+			disabled={disabled}
+		>
 			<Text style={textStyle}>{text}</Text>
 		</TouchableOpacity>
 	);

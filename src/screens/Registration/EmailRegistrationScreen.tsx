@@ -7,29 +7,28 @@ import Button from "../../shared/components/Button";
 import { ThemeType } from "../../shared/ThemeManager";
 import SafeScreen from "./SafeScreen";
 import { validateEmail, validatePhone } from "../../utils/Helper";
+import { ValidateRegistrationResult } from "../../typings";
 
 // interface Props extends StackNavigationProp {}
 
-enum SelectedMethod {
-	Phone,
-	Email,
-}
+type SelectedMethod = "phone" | "email";
 
 export default function EmailRegistrationScreen() {
 	const keyboardRef = useRef<VirtualKeyboard>(null);
 	const inputRef = useRef<TextInput>(null);
-	const [method, setMethod] = useState<SelectedMethod>(SelectedMethod.Phone);
+	const [method, setMethod] = useState<SelectedMethod>("phone");
 	const [value, setValue] = useState<string>("");
 	const [placeholder, setPlaceholder] = useState<string>("Phone or Email");
+	const [disableButton, setDisableButton] = useState<boolean>(true);
 
 	useEffect(() => {
 		Keyboard.dismiss();
 	}, []);
 
-	const onKeyPressed = (key: any) => {
+	const onKeyPressed = (key: string) => {
 		switch (key) {
 			case "custom":
-				setMethod(SelectedMethod.Email);
+				setMethod("email");
 				setPlaceholder("Email");
 				if (inputRef.current) inputRef.current.focus();
 				break;
@@ -41,25 +40,37 @@ export default function EmailRegistrationScreen() {
 		}
 	};
 
-	const onInputChange = (text: string) => setValue(text);
-
-	const onNextClick = () => {
-		if (value.length < 1) return;
-		switch (method) {
-			case SelectedMethod.Phone:
-				if (!validatePhone(value)) return;
-				break;
-			case SelectedMethod.Email:
-				if (!validateEmail(value)) return;
-				break;
-		}
+	const onInputChange = (): void => {
+		const { success, parsedText } = validateInput();
+		setDisableButton(!success);
+		setValue(parsedText ?? value);
 	};
 
-	const onUsePhoneClick = () => {
-		setMethod(SelectedMethod.Phone);
+	const onNextClick = (): void => {
+		const correctness = validateInput();
+		if (!correctness) return console.log("Failed");
+	};
+
+	const onUsePhoneClick = (): void => {
+		setMethod("phone");
 		setPlaceholder("Phone or Email");
 		if (inputRef.current) inputRef.current.blur();
 		Keyboard.dismiss();
+	};
+
+	const validateInput = (): ValidateRegistrationResult => {
+		if (value.length < 1) return { success: false };
+		switch (method) {
+			case "phone":
+				const parsedText = value.replace(/\D/g, "");
+				if (validatePhone(value)) return { success: true, parsedText };
+				break;
+			case "email":
+				if (validateEmail(value)) return { success: true };
+				break;
+		}
+
+		return { success: false };
 	};
 
 	return (
@@ -67,6 +78,7 @@ export default function EmailRegistrationScreen() {
 			<SafeScreen style={styles.topContainer}>
 				<Text style={styles.header}>Enter your phone or email</Text>
 				<TextInput
+					testID="test-input-email-phone"
 					ref={inputRef}
 					style={styles.textInput}
 					onChangeText={onInputChange}
@@ -75,7 +87,7 @@ export default function EmailRegistrationScreen() {
 					// showSoftInputOnFocus={false}
 					onFocus={() => {
 						// for iOS?
-						if (method === SelectedMethod.Phone) {
+						if (method === "phone") {
 							Keyboard.dismiss();
 							return false;
 						}
@@ -83,26 +95,28 @@ export default function EmailRegistrationScreen() {
 				/>
 			</SafeScreen>
 
-			{method === SelectedMethod.Phone ? (
+			{method === "phone" ? (
 				<View style={styles.bottomContainer}>
 					<VirtualKeyboard
+						testID="test-virtual-keyboard"
 						keyStyle={{ backgroundColor: "white", borderRightWidth: 0, borderBottomWidth: 0 }}
 						style={styles.keyboard}
 						onRef={(ref: any) => (keyboardRef.current = ref)}
 						onKeyDown={onKeyPressed}
-						keyboard={[
-							[1, 2, 3],
-							[4, 5, 6],
-							[7, 8, 9],
-							["abc", 0, 1],
-						]}
+						// keyboard={[
+						// 	[1, 2, 3],
+						// 	[4, 5, 6],
+						// 	[7, 8, 9],
+						// 	["abc", 0, 1],
+						// ]}
 					/>
 					<View style={{ alignItems: "center", marginTop: 20 }}>
 						<Button
+							testKey="phone-next"
 							width={90}
 							text="Next"
 							onPress={onNextClick}
-							disabled={value.length < 1 || !validatePhone(value)}
+							disabled={disableButton}
 						></Button>
 					</View>
 				</View>
@@ -121,6 +135,7 @@ export default function EmailRegistrationScreen() {
 				>
 					<View style={{ flex: 1, alignItems: "center" }}>
 						<Button
+							testKey="use-phone"
 							width={90}
 							theme={ThemeType.SECONDARY}
 							text="Use Phone"
@@ -129,10 +144,11 @@ export default function EmailRegistrationScreen() {
 					</View>
 					<View style={{ flex: 1, alignItems: "center" }}>
 						<Button
+							testKey="email-next"
 							width={90}
 							text="Next"
 							onPress={onNextClick}
-							disabled={value.length < 1 || !validateEmail(value)}
+							disabled={disableButton}
 						></Button>
 					</View>
 				</View>
