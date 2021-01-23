@@ -1,0 +1,1019 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmailRegistrationScreen /> should mount component 1`] = `
+<RNCSafeAreaView
+  style={
+    Object {
+      "backgroundColor": "white",
+      "flex": 1,
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "paddingLeft": 77.14285714285714,
+          "paddingTop": 129.4764705882353,
+        },
+        Object {
+          "flex": 1,
+          "flexBasis": 140,
+          "paddingLeft": 36,
+          "paddingTop": 66,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontFamily": "GothamMed",
+          "fontSize": 26,
+        }
+      }
+    >
+      Enter your phone or email
+    </Text>
+    <TextInput
+      allowFontScaling={true}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="Phone or Email"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "fontSize": 24,
+          "height": 30,
+          "marginTop": 20,
+          "width": "100%",
+        }
+      }
+      testID="test-input-email-phone"
+      underlineColorAndroid="transparent"
+      value=""
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 26,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": null,
+          "flexDirection": "column",
+          "justifyContent": "flex-end",
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#FFF",
+              "height": 250,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onLayout={[Function]}
+            onPressIn={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onRippleAnimation={[Function]}
+            onStartShouldSetResponder={[Function]}
+            pointerEvents="box-only"
+            rippleCentered={false}
+            rippleColor="#000"
+            rippleDuration={450}
+            rippleFades={true}
+            rippleOpacity={0.3}
+            rippleSequential={false}
+            rippleSize={250}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "white",
+                "borderBottomColor": "#e8e8e8",
+                "borderBottomWidth": 0,
+                "borderRightColor": "#e8e8e8",
+                "borderRightWidth": 0,
+                "flex": 1,
+                "flexDirection": "column",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#222222",
+                    "fontFamily": "HelveticaNeue",
+                    "fontSize": 25,
+                    "fontWeight": "400",
+                    "textAlign": "center",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              1
+            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "bottom": 0,
+                    "left": 0,
+                    "overflow": "hidden",
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "borderRadius": 0,
+                  },
+                  Object {},
+                ]
+              }
+            />
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onLayout={[Function]}
+            onPressIn={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onRippleAnimation={[Function]}
+            onStartShouldSetResponder={[Function]}
+            pointerEvents="box-only"
+            rippleCentered={false}
+            rippleColor="#000"
+            rippleDuration={450}
+            rippleFades={true}
+            rippleOpacity={0.3}
+            rippleSequential={false}
+            rippleSize={250}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "white",
+                "borderBottomColor": "#e8e8e8",
+                "borderBottomWidth": 0,
+                "borderRightColor": "#e8e8e8",
+                "borderRightWidth": 0,
+                "flex": 1,
+                "flexDirection": "column",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#222222",
+                    "fontFamily": "HelveticaNeue",
+                    "fontSize": 25,
+                    "fontWeight": "400",
+                    "textAlign": "center",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              2
+            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "bottom": 0,
+                    "left": 0,
+                    "overflow": "hidden",
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "borderRadius": 0,
+                  },
+                  Object {},
+                ]
+              }
+            />
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onLayout={[Function]}
+            onPressIn={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onRippleAnimation={[Function]}
+            onStartShouldSetResponder={[Function]}
+            pointerEvents="box-only"
+            rippleCentered={false}
+            rippleColor="#000"
+            rippleDuration={450}
+            rippleFades={true}
+            rippleOpacity={0.3}
+            rippleSequential={false}
+            rippleSize={250}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "white",
+                "borderBottomColor": "#e8e8e8",
+                "borderBottomWidth": 0,
+                "borderRightColor": "#e8e8e8",
+                "borderRightWidth": 0,
+                "flex": 1,
+                "flexDirection": "column",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#222222",
+                    "fontFamily": "HelveticaNeue",
+                    "fontSize": 25,
+                    "fontWeight": "400",
+                    "textAlign": "center",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              3
+            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "bottom": 0,
+                    "left": 0,
+                    "overflow": "hidden",
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "borderRadius": 0,
+                  },
+                  Object {},
+                ]
+              }
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onLayout={[Function]}
+            onPressIn={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onRippleAnimation={[Function]}
+            onStartShouldSetResponder={[Function]}
+            pointerEvents="box-only"
+            rippleCentered={false}
+            rippleColor="#000"
+            rippleDuration={450}
+            rippleFades={true}
+            rippleOpacity={0.3}
+            rippleSequential={false}
+            rippleSize={250}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "white",
+                "borderBottomColor": "#e8e8e8",
+                "borderBottomWidth": 0,
+                "borderRightColor": "#e8e8e8",
+                "borderRightWidth": 0,
+                "flex": 1,
+                "flexDirection": "column",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#222222",
+                    "fontFamily": "HelveticaNeue",
+                    "fontSize": 25,
+                    "fontWeight": "400",
+                    "textAlign": "center",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              4
+            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "bottom": 0,
+                    "left": 0,
+                    "overflow": "hidden",
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "borderRadius": 0,
+                  },
+                  Object {},
+                ]
+              }
+            />
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onLayout={[Function]}
+            onPressIn={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onRippleAnimation={[Function]}
+            onStartShouldSetResponder={[Function]}
+            pointerEvents="box-only"
+            rippleCentered={false}
+            rippleColor="#000"
+            rippleDuration={450}
+            rippleFades={true}
+            rippleOpacity={0.3}
+            rippleSequential={false}
+            rippleSize={250}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "white",
+                "borderBottomColor": "#e8e8e8",
+                "borderBottomWidth": 0,
+                "borderRightColor": "#e8e8e8",
+                "borderRightWidth": 0,
+                "flex": 1,
+                "flexDirection": "column",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#222222",
+                    "fontFamily": "HelveticaNeue",
+                    "fontSize": 25,
+                    "fontWeight": "400",
+                    "textAlign": "center",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              5
+            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "bottom": 0,
+                    "left": 0,
+                    "overflow": "hidden",
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "borderRadius": 0,
+                  },
+                  Object {},
+                ]
+              }
+            />
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onLayout={[Function]}
+            onPressIn={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onRippleAnimation={[Function]}
+            onStartShouldSetResponder={[Function]}
+            pointerEvents="box-only"
+            rippleCentered={false}
+            rippleColor="#000"
+            rippleDuration={450}
+            rippleFades={true}
+            rippleOpacity={0.3}
+            rippleSequential={false}
+            rippleSize={250}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "white",
+                "borderBottomColor": "#e8e8e8",
+                "borderBottomWidth": 0,
+                "borderRightColor": "#e8e8e8",
+                "borderRightWidth": 0,
+                "flex": 1,
+                "flexDirection": "column",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#222222",
+                    "fontFamily": "HelveticaNeue",
+                    "fontSize": 25,
+                    "fontWeight": "400",
+                    "textAlign": "center",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              6
+            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "bottom": 0,
+                    "left": 0,
+                    "overflow": "hidden",
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "borderRadius": 0,
+                  },
+                  Object {},
+                ]
+              }
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onLayout={[Function]}
+            onPressIn={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onRippleAnimation={[Function]}
+            onStartShouldSetResponder={[Function]}
+            pointerEvents="box-only"
+            rippleCentered={false}
+            rippleColor="#000"
+            rippleDuration={450}
+            rippleFades={true}
+            rippleOpacity={0.3}
+            rippleSequential={false}
+            rippleSize={250}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "white",
+                "borderBottomColor": "#e8e8e8",
+                "borderBottomWidth": 0,
+                "borderRightColor": "#e8e8e8",
+                "borderRightWidth": 0,
+                "flex": 1,
+                "flexDirection": "column",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#222222",
+                    "fontFamily": "HelveticaNeue",
+                    "fontSize": 25,
+                    "fontWeight": "400",
+                    "textAlign": "center",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              7
+            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "bottom": 0,
+                    "left": 0,
+                    "overflow": "hidden",
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "borderRadius": 0,
+                  },
+                  Object {},
+                ]
+              }
+            />
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onLayout={[Function]}
+            onPressIn={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onRippleAnimation={[Function]}
+            onStartShouldSetResponder={[Function]}
+            pointerEvents="box-only"
+            rippleCentered={false}
+            rippleColor="#000"
+            rippleDuration={450}
+            rippleFades={true}
+            rippleOpacity={0.3}
+            rippleSequential={false}
+            rippleSize={250}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "white",
+                "borderBottomColor": "#e8e8e8",
+                "borderBottomWidth": 0,
+                "borderRightColor": "#e8e8e8",
+                "borderRightWidth": 0,
+                "flex": 1,
+                "flexDirection": "column",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#222222",
+                    "fontFamily": "HelveticaNeue",
+                    "fontSize": 25,
+                    "fontWeight": "400",
+                    "textAlign": "center",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              8
+            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "bottom": 0,
+                    "left": 0,
+                    "overflow": "hidden",
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "borderRadius": 0,
+                  },
+                  Object {},
+                ]
+              }
+            />
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onLayout={[Function]}
+            onPressIn={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onRippleAnimation={[Function]}
+            onStartShouldSetResponder={[Function]}
+            pointerEvents="box-only"
+            rippleCentered={false}
+            rippleColor="#000"
+            rippleDuration={450}
+            rippleFades={true}
+            rippleOpacity={0.3}
+            rippleSequential={false}
+            rippleSize={250}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "white",
+                "borderBottomColor": "#e8e8e8",
+                "borderBottomWidth": 0,
+                "borderRightColor": "#e8e8e8",
+                "borderRightWidth": 0,
+                "flex": 1,
+                "flexDirection": "column",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#222222",
+                    "fontFamily": "HelveticaNeue",
+                    "fontSize": 25,
+                    "fontWeight": "400",
+                    "textAlign": "center",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              9
+            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "bottom": 0,
+                    "left": 0,
+                    "overflow": "hidden",
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "borderRadius": 0,
+                  },
+                  Object {},
+                ]
+              }
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onLayout={[Function]}
+            onPressIn={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onRippleAnimation={[Function]}
+            onStartShouldSetResponder={[Function]}
+            pointerEvents="box-only"
+            rippleCentered={false}
+            rippleColor="#000"
+            rippleDuration={450}
+            rippleFades={true}
+            rippleOpacity={0.3}
+            rippleSequential={false}
+            rippleSize={250}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "white",
+                "borderBottomColor": "#e8e8e8",
+                "borderBottomWidth": 0,
+                "borderRightColor": "#e8e8e8",
+                "borderRightWidth": 0,
+                "flex": 1,
+                "flexDirection": "column",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Image
+              style={
+                Array [
+                  Object {
+                    "height": 28,
+                    "width": 28,
+                  },
+                  undefined,
+                ]
+              }
+            />
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "bottom": 0,
+                    "left": 0,
+                    "overflow": "hidden",
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "borderRadius": 0,
+                  },
+                  Object {},
+                ]
+              }
+            />
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onLayout={[Function]}
+            onPressIn={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onRippleAnimation={[Function]}
+            onStartShouldSetResponder={[Function]}
+            pointerEvents="box-only"
+            rippleCentered={false}
+            rippleColor="#000"
+            rippleDuration={450}
+            rippleFades={true}
+            rippleOpacity={0.3}
+            rippleSequential={false}
+            rippleSize={250}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "white",
+                "borderBottomColor": "#e8e8e8",
+                "borderBottomWidth": 0,
+                "borderRightColor": "#e8e8e8",
+                "borderRightWidth": 0,
+                "flex": 1,
+                "flexDirection": "column",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#222222",
+                    "fontFamily": "HelveticaNeue",
+                    "fontSize": 25,
+                    "fontWeight": "400",
+                    "textAlign": "center",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              0
+            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "bottom": 0,
+                    "left": 0,
+                    "overflow": "hidden",
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "borderRadius": 0,
+                  },
+                  Object {},
+                ]
+              }
+            />
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onLayout={[Function]}
+            onPressIn={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onRippleAnimation={[Function]}
+            onStartShouldSetResponder={[Function]}
+            pointerEvents="box-only"
+            rippleCentered={false}
+            rippleColor="#000"
+            rippleDuration={450}
+            rippleFades={true}
+            rippleOpacity={0.3}
+            rippleSequential={false}
+            rippleSize={250}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "white",
+                "borderBottomColor": "#e8e8e8",
+                "borderBottomWidth": 0,
+                "borderRightColor": "#e8e8e8",
+                "borderRightWidth": 0,
+                "flex": 1,
+                "flexDirection": "column",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Image
+              source={1}
+              style={
+                Array [
+                  Object {
+                    "height": 28,
+                    "width": 28,
+                  },
+                  undefined,
+                ]
+              }
+            />
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "bottom": 0,
+                    "left": 0,
+                    "overflow": "hidden",
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "borderRadius": 0,
+                  },
+                  Object {},
+                ]
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "marginTop": 20,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#00d650",
+            "borderRadius": 30,
+            "fontFamily": "GothamMed",
+            "height": 81.42857142857143,
+            "justifyContent": "center",
+            "opacity": 1,
+            "width": "90%",
+          }
+        }
+        testID="test-button-phone-next"
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontFamily": "GothamMed",
+                "fontSize": 30,
+              },
+              Object {
+                "color": "rgba(244, 244, 244, 0.5)",
+              },
+            ]
+          }
+        >
+          Next
+        </Text>
+      </View>
+    </View>
+  </View>
+</RNCSafeAreaView>
+`;

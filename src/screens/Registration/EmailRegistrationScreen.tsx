@@ -30,6 +30,7 @@ export default function EmailRegistrationScreen() {
 			case "custom":
 				setMethod("email");
 				setPlaceholder("Email");
+				setValue("");
 				if (inputRef.current) inputRef.current.focus();
 				break;
 			case "back":
@@ -40,33 +41,44 @@ export default function EmailRegistrationScreen() {
 		}
 	};
 
-	const onInputChange = (): void => {
-		const { success, parsedText } = validateInput();
-		setDisableButton(!success);
-		setValue(parsedText ?? value);
+	const onInputChange = (text: string): void => {
+		let result = validateInput(text);
+		switch (method) {
+			case "email":
+				result = validateInput(text);
+				setValue(text);
+				break;
+			case "phone":
+				// won't happen, only used for testing
+				setValue(result.parsedText ?? text);
+				break;
+		}
+
+		setDisableButton(!result.success);
 	};
 
 	const onNextClick = (): void => {
-		const correctness = validateInput();
-		if (!correctness) return console.log("Failed");
+		const { success } = validateInput(value);
+		if (!success) return console.log("Failed");
 	};
 
 	const onUsePhoneClick = (): void => {
 		setMethod("phone");
 		setPlaceholder("Phone or Email");
+		setValue("");
 		if (inputRef.current) inputRef.current.blur();
 		Keyboard.dismiss();
 	};
 
-	const validateInput = (): ValidateRegistrationResult => {
-		if (value.length < 1) return { success: false };
+	const validateInput = (text: string): ValidateRegistrationResult => {
+		if (text.length < 1) return { success: false };
 		switch (method) {
 			case "phone":
-				const parsedText = value.replace(/\D/g, "");
-				if (validatePhone(value)) return { success: true, parsedText };
+				const parsedText = text.replace(/\D/g, "");
+				if (validatePhone(text)) return { success: true, parsedText };
 				break;
 			case "email":
-				if (validateEmail(value)) return { success: true };
+				if (validateEmail(text)) return { success: true };
 				break;
 		}
 
@@ -88,7 +100,7 @@ export default function EmailRegistrationScreen() {
 					onFocus={() => {
 						// for iOS?
 						if (method === "phone") {
-							Keyboard.dismiss();
+							// Keyboard.dismiss();
 							return false;
 						}
 					}}
