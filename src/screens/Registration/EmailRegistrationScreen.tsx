@@ -100,7 +100,7 @@ export default function EmailRegistrationScreen() {
 					onFocus={() => {
 						// for iOS?
 						if (method === "phone") {
-							// Keyboard.dismiss();
+							Keyboard.dismiss();
 							return false;
 						}
 					}}
