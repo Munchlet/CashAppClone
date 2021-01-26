@@ -27,4 +27,17 @@ describe("<EmailRegistrationScreen />", () => {
 		fireEvent.changeText(input, "abcd");
 		expect(input.props.value).toBe("");
 	});
+
+	it("should validate input", () => {
+		const { debug, getByTestId, getByText, queryByTestId, toJSON } = render(<EmailRegistrationScreen />);
+		const input = getByTestId("test-input-email-phone");
+
+		const b1 = getByTestId("VirtualKeyboard-1");
+		const b2 = getByTestId("VirtualKeyboard-2");
+		const b3 = getByTestId("VirtualKeyboard-3");
+		fireEvent.press(b1);
+		fireEvent.press(b2);
+		fireEvent.press(b3);
+		expect(input.props.value).toBe("123");
+	});
 });
