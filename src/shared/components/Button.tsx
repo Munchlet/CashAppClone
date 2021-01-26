@@ -1,5 +1,5 @@
 import React from "react";
-import { GestureResponderEvent, StyleSheet, Text, TouchableOpacity, ViewStyle } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, ViewStyle } from "react-native";
 import { s } from "react-native-size-matters";
 import { ThemeType } from "../ThemeManager";
 

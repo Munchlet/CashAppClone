@@ -1,6 +1,6 @@
 import { RouteProp } from "@react-navigation/native";
 import { createStackNavigator, StackNavigationProp } from "@react-navigation/stack";
-import { NavigationModule } from "../../typings";
+import { NavigationModule } from "typings";
 import EmailScreen from "./EmailRegistrationScreen";
 
 type RegistrationParamList = {

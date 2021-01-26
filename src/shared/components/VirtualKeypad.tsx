@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Vibration, StyleSheet, ViewStyle, Platform } from "react-native";
+import { Platform, StyleSheet, Text, Vibration, View, ViewStyle } from "react-native";
 import Ripple from "react-native-material-ripple";
 
 type KeyType = number | string;

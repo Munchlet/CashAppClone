@@ -3,11 +3,11 @@ import { Keyboard, StyleSheet, Text, TextInput, View, ViewStyle } from "react-na
 import { SafeAreaView } from "react-native-safe-area-context";
 import { VirtualKeyboard } from "react-native-screen-keyboard";
 import { s } from "react-native-size-matters";
-import Button from "../../shared/components/Button";
-import { ThemeType } from "../../shared/ThemeManager";
+import Button from "shared/components/Button";
+import { ThemeType } from "shared/ThemeManager";
+import { ValidateRegistrationResult } from "typings";
+import { validateEmail, validatePhone } from "utils/Helper";
 import SafeScreen from "./SafeScreen";
-import { validateEmail, validatePhone } from "../../utils/Helper";
-import { ValidateRegistrationResult } from "../../typings";
 
 // interface Props extends StackNavigationProp {}
 

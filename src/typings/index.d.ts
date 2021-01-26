@@ -8,8 +8,10 @@ export interface ValidateRegistrationResult {
 	success: boolean;
 }
 
-export type NavigationModule<ParamList extends ParamListBase, OptionsType = StackNavigationOptions> = Record<keyof ParamList, {
-	component: React.ComponentType<any>;
-	options?: DefaultNavigatorOptions<OptionsType, ParamList>["screenOptions"];
-}
-
+export type NavigationModule<ParamList extends ParamListBase, OptionsType = StackNavigationOptions> = Record<
+	keyof ParamList,
+	{
+		component: React.ComponentType<any>;
+		options?: DefaultNavigatorOptions<OptionsType, ParamList>["screenOptions"];
+	}
+>;
